@@ -41,7 +41,9 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script:
-            docker stop web-8080
+            docker stop web-8080 &&
+            while docker container inspect web-8080 >/dev/null 2>&1; do sleep 1; done && docker rm -f web-8080
+#            docker pull ${{ vars.IMAGE_NAME }}
 #            sleep 5
 #            docker rm web-8080
 #            sleep 5
