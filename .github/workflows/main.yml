@@ -42,12 +42,12 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script:
             docker stop web-8080
-            sleep 5
-            docker rm web-8080
-            sleep 5
-            docker pull ${{ vars.IMAGE_NAME }}
-            sleep 5
-            docker run -d -p 8080:8080 --name ${{ vars.CONTAINER_NAME }} ${{ vars.IMAGE_NAME }}
+#            sleep 5
+#            docker rm web-8080
+#            sleep 5
+#            docker pull ${{ vars.IMAGE_NAME }}
+#            sleep 5
+#            docker run -d -p 8080:8080 --name ${{ vars.CONTAINER_NAME }} ${{ vars.IMAGE_NAME }}
 
 #            docker stop web-8080 &&
 #              while docker container inspect web-8080 >/dev/null 2>&1; do sleep 1; done &&
