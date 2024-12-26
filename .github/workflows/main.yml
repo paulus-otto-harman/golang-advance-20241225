@@ -41,6 +41,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script:
-            docker rm -f web-8080
-            docker pull ${{ vars.IMAGE_NAME }}
-            docker run -d -p 8080:8080 --name ${{ vars.CONTAINER_NAME }} ${{ vars.IMAGE_NAME }}
+            whoami
+#            docker rm -f web-8080
+#            docker pull ${{ vars.IMAGE_NAME }}
+#            docker run -d -p 8080:8080 --name ${{ vars.CONTAINER_NAME }} ${{ vars.IMAGE_NAME }}
