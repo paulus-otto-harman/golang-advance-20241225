@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script:
-            docker stop ${{ vars.CONTAINER_NAME }} || true &&
-            docker rm ${{ vars.CONTAINER_NAME }} || true &&
-            docker pull ${{ vars.IMAGE_NAME }} &&
-            docker run -d --name ${{ vars.CONTAINER_NAME }} -p 8080:8080 --restart always ${{ vars.IMAGE_NAME }}
+#            docker stop ${{ vars.CONTAINER_NAME }} || true &&
+#            docker rm ${{ vars.CONTAINER_NAME }} || true &&
+#            docker pull ${{ vars.IMAGE_NAME }} &&
+#            docker run -d --name ${{ vars.CONTAINER_NAME }} -p 8080:8080 --restart always ${{ vars.IMAGE_NAME }}
