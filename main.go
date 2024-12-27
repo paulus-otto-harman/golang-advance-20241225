@@ -16,5 +16,11 @@ func main() {
 		})
 	})
 
+	r.GET("/lagi", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "Lagi-lagi haloooo",
+		})
+	})
+
 	r.Run(":8080")
 }
