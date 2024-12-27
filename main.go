@@ -22,5 +22,11 @@ func main() {
 		})
 	})
 
+	r.GET("/satu", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "tim 1",
+		})
+	})
+
 	r.Run(":8080")
 }
